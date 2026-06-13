@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    /* Progressive enhancement: mark JS active (enables reveal animation).
+       Safety net: if the main script never runs, reveal everything anyway. */
+    document.documentElement.className += ' js';
+    addEventListener('load', function () {
+      setTimeout(function () {
+        if (!window.__lipReveal) {
+          var els = document.querySelectorAll('.reveal');
+          for (var i = 0; i < els.length; i++) els[i].classList.add('in');
+        }
+      }, 1500);
+    });
+  </script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ÁSZF — LipCake Factory</title>
+  <meta name="description" content="A LipCake Factory Tortaműhely Általános Szerződési Feltételei — rendelés, fizetés, szállítás, elállás szabályai." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Corben:wght@400;700&family=Cormorant:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Poiret+One&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav class="nav" aria-label="Főnavigáció">
+    <a href="index.html" class="nav-brand" aria-label="LipCake Factory Tortaműhely"><img class="nav-logo" src="https://tortamuhely.com/wp-content/uploads/2022/04/tortamuhely-retina.jpg" alt="LipCake Factory Tortaműhely" /></a>
+    <ul class="nav-menu">
+      <li><a href="gyerek-tortak.html">Gyerek torták</a></li>
+      <li><a href="mentes-tortak.html">Mentes</a></li>
+      <li><a href="eskuvoi-tortak.html">Esküvői</a></li>
+      <li><a href="izlista.html">Ízek</a></li>
+      <li><a href="galeria.html">Galéria</a></li>
+      <li class="menu-cta"><a href="rendeles.html">Rendelés</a></li>
+      <li class="menu-contact"><a href="tel:+36304108605">+36 30 410 8605</a></li>
+    </ul>
+    <span class="nav-cta-wrap"><a href="rendeles.html" class="nav-cta"><span>Rendelés</span></a></span>
+    <button class="nav-toggle" aria-label="Menü"><span></span><span></span><span></span></button>
+  </nav>
+
+  <section class="legal-page container">
+    <div class="legal-content">
+      <span class="chapter-num">— jogi információk</span>
+      <h1 class="display-l" style="margin-top: 1rem; margin-bottom: 1rem;">
+        Általános<br /><em>Szerződési Feltételek</em>
+      </h1>
+      <p class="legal-meta">Hatályos: 2026. január 1-től · Verzió: 1.0</p>
+
+      <div class="legal-toc">
+        <h4>Tartalomjegyzék</h4>
+        <ol>
+          <li><a href="#bevezeto">Bevezető rendelkezések</a></li>
+          <li><a href="#szolgaltato">A Szolgáltató adatai</a></li>
+          <li><a href="#fogalmak">Fogalom-meghatározások</a></li>
+          <li><a href="#termekek">Megrendelhető termékek</a></li>
+          <li><a href="#megrendeles">A megrendelés folyamata</a></li>
+          <li><a href="#arak">Árak és fizetési feltételek</a></li>
+          <li><a href="#szallitas">Szállítás és átvétel</a></li>
+          <li><a href="#elallas">Elállási és felmondási jog</a></li>
+          <li><a href="#hibas">Hibás teljesítés és szavatosság</a></li>
+          <li><a href="#allergen">Allergén és élelmiszer-biztonsági tájékoztatás</a></li>
+          <li><a href="#panasz">Panaszkezelés és jogviták</a></li>
+        </ol>
+      </div>
+
+      <h2 id="bevezeto">1. Bevezető rendelkezések</h2>
+      <p>
+        A jelen Általános Szerződési Feltételek (a továbbiakban: <strong>ÁSZF</strong>)
+        a Keléné Lipka Tímea egyéni vállalkozó (a továbbiakban: <strong>Szolgáltató</strong>)
+        és a <a href="index.html">tortamuhely.com</a> weboldalon (a továbbiakban:
+        <strong>Weboldal</strong>) keresztül megrendelést leadó természetes vagy
+        jogi személy (a továbbiakban: <strong>Megrendelő</strong>) közötti
+        szerződéses kapcsolat feltételeit rögzítik.
+      </p>
+      <p>
+        A megrendelés leadásával a Megrendelő kijelenti, hogy a jelen ÁSZF
+        tartalmát megismerte és elfogadja. Az ÁSZF rendelkezései a Felek
+        közötti szerződés elválaszthatatlan részét képezik.
+      </p>
+      <p>
+        A jelen ÁSZF-re a magyar jog rendelkezései az irányadók, különös
+        tekintettel a <strong>Polgári Törvénykönyvről szóló 2013. évi V.
+        törvényre</strong> (Ptk.), a <strong>fogyasztó és a vállalkozás
+        közötti szerződések részletes szabályairól szóló 45/2014. (II. 26.)
+        Korm. rendeletre</strong>, valamint az <strong>elektronikus
+        kereskedelmi szolgáltatásokról szóló 2001. évi CVIII. törvényre</strong>.
+      </p>
+
+      <h2 id="szolgaltato">2. A Szolgáltató adatai</h2>
+      <div class="legal-info-box">
+        <p>
+          <strong>Név:</strong> Keléné Lipka Tímea<br />
+          <strong>Vállalkozás neve:</strong> LipCake Factory Tortaműhely<br />
+          <strong>Levelezési cím / műhely:</strong> 1203 Budapest, Vízisport u. 23/E. (Mediterrán Lakópark)<br />
+          <strong>Telefon:</strong> <a href="tel:+36304108605">+36 30 410 8605</a><br />
+          <strong>E-mail:</strong> <a href="mailto:lipcakefactory@gmail.com">lipcakefactory@gmail.com</a><br />
+          <strong>Tárhely-szolgáltató és webüzemeltető:</strong> Stubán Lukács e.v., 9023 Győr, Blaha Lujza u. 2.
+        </p>
+      </div>
+
+      <h2 id="fogalmak">3. Fogalom-meghatározások</h2>
+      <ul>
+        <li>
+          <strong>Egyedileg készített termék:</strong> minden tortát és
+          desszertet a Szolgáltató kifejezetten a Megrendelő utasításai szerint,
+          személyre szabottan készít el — íz, méret, dizájn, allergén-igények
+          alapján. Ennek megfelelően minden termék egyedileg készítettnek minősül.
+        </li>
+        <li>
+          <strong>Foglaló:</strong> a teljes vételár 50%-a, amely a megrendelés
+          érvényességéhez szükséges előleg. A foglaló jogi értelemben a
+          Ptk. 6:185. §-a szerinti foglalónak minősül.
+        </li>
+        <li>
+          <strong>Szolgáltatási díj:</strong> a Megrendelő által fizetett
+          1,5%-os tranzakciós díj az online fizetésért, amely a fizetésfeldolgozást
+          és a webshop üzemeltetését fedezi.
+        </li>
+        <li>
+          <strong>Foglalási időpont:</strong> a Megrendelő által kiválasztott
+          esemény dátuma, amikorra a megrendelt tortát átvehető állapotba
+          kell hozni.
+        </li>
+      </ul>
+
+      <h2 id="termekek">4. Megrendelhető termékek</h2>
+      <p>A Szolgáltató az alábbi főbb termékkategóriákat kínálja:</p>
+      <ul>
+        <li><strong>Esküvői torták</strong> — naked, burkolt, többszintes kivitelben</li>
+        <li><strong>Design (alkalmi) torták</strong> — születésnap, keresztelő, babaváró, eljegyzés stb.</li>
+        <li><strong>Mentes torták</strong> — cukor-, glutén-, laktóz-, tojásmentes és nyers vegán kivitelben</li>
+        <li><strong>Kóstoló box</strong> — előzetes ízelítő rendelés esetén</li>
+      </ul>
+      <p>
+        Minden termék <strong>kizárólag előzetes megrendelés alapján</strong>
+        készül. A műhelyben napi kínálat vagy raktárkészlet nem áll
+        rendelkezésre. A Szolgáltató mentes (cukor-, glutén-, laktóz-,
+        tojásmentes és nyers vegán) opciókat is vállal.
+      </p>
+
+      <h2 id="megrendeles">5. A megrendelés folyamata</h2>
+
+      <h3>5.1. Megrendelés leadása</h3>
+      <p>A megrendelés a Weboldalon a <a href="rendeles.html">Rendelés</a> menüpont alatti négylépéses folyamatban adható le:</p>
+      <ol>
+        <li><strong>Terméktípus kiválasztása</strong> (esküvői / design / mentes / egyéb)</li>
+        <li><strong>Esemény dátumának kiválasztása</strong> a naptárból (a foglalt napok nem választhatók, és a megrendelés leadása legalább 2 héttel az esemény előtt szükséges)</li>
+        <li><strong>Megrendelői adatok megadása</strong> (név, e-mail, telefon, ízpreferenciák, allergén-igények, egyedi kívánságok)</li>
+        <li><strong>Foglaló kifizetése</strong> online bankkártyával (Stripe)</li>
+      </ol>
+
+      <h3>5.2. A szerződés létrejötte</h3>
+      <p>
+        A Felek közötti szerződés a foglaló sikeres kifizetésével jön
+        létre. A Szolgáltató a fizetést követő 24 órán belül visszaigazolást
+        küld a Megrendelő e-mail címére, amelyben rögzíti a megrendelés
+        részleteit.
+      </p>
+      <p>
+        Amennyiben a kiválasztott dátumon vagy a megadott specifikációval
+        a Szolgáltató nem tudja vállalni a megrendelést (pl. túl bonyolult
+        kivitelezés, kapacitáshiány), erről a visszaigazolás helyett írásban
+        tájékoztatja a Megrendelőt, és a befizetett foglalót teljes összegben
+        <strong>5 munkanapon belül</strong> visszautalja.
+      </p>
+
+      <h3>5.3. "Soft hold" foglalási rendszer</h3>
+      <p>
+        A naptári dátum kiválasztása után a Megrendelőnek <strong>15 perc</strong>
+        áll rendelkezésére a fizetés befejezésére. Amennyiben ezen időszak
+        alatt a fizetés nem történik meg, a dátum automatikusan felszabadul,
+        és újra elérhetővé válik más megrendelők számára.
+      </p>
+
+      <h2 id="arak">6. Árak és fizetési feltételek</h2>
+
+      <h3>6.1. Árképzés</h3>
+      <p>
+        Mivel minden torta egyedileg készített termék, fix árlista nem
+        áll rendelkezésre. A pontos árajánlat a megrendelés specifikációja
+        (méret, kivitelezés, díszítés, allergén-igények) alapján kerül
+        meghatározásra.
+      </p>
+      <p>
+        A megrendelés <strong>foglalóval</strong> válik érvényessé — a foglaló
+        összege az egyeztetett ár 50%-a. A pontos végösszeget és a foglaló
+        mértékét a Szolgáltató az árajánlatban közli. A fennmaradó részt az
+        esemény előtt 2 nappal kell megfizetni.
+      </p>
+
+      <h3>6.2. Fizetés módja és ütemezése</h3>
+      <ul>
+        <li>
+          <strong>1. részlet — foglaló:</strong> az egyeztetett ár 50%-a,
+          a visszaigazolás után, banki átutalással
+        </li>
+        <li>
+          <strong>2. részlet — végösszeg:</strong> az esemény előtt 2 nappal;
+          a Szolgáltató emailben küld értesítést a fennmaradó összegről
+        </li>
+      </ul>
+      <p>
+        Az árak forintban (HUF) értendők, a megrendelés időpontjában érvényes
+        áfa-mértékkel. A Szolgáltató fenntartja a jogot, hogy egyedi
+        árajánlatban más fizetési ütemezést alkalmazzon.
+      </p>
+
+      <h3>6.3. Számlázás</h3>
+      <p>
+        A Szolgáltató minden befizetésről elektronikus számlát állít ki, amelyet
+        e-mailben küld a Megrendelő részére. A számlák a Számlázz.hu rendszerben
+        készülnek, a magyar számviteli előírásoknak megfelelően.
+      </p>
+
+      <h2 id="szallitas">7. Szállítás és átvétel</h2>
+
+      <h3>7.1. Átvétel a műhelyben</h3>
+      <p>
+        A megrendelt termék alapesetben a Szolgáltató műhelyében vehető
+        át (1203 Budapest, Vízisport u. 23/E.), előre egyeztetett időpontban.
+        Az átvétel időpontját a Szolgáltató az esemény előtt egyezteti.
+      </p>
+
+      <h3>7.2. Kiszállítás</h3>
+      <p>
+        Egyedi egyeztetés alapján kiszállítást is vállalunk Budapest
+        közigazgatási területén belül és vonzáskörzetében. A kiszállítás
+        díja a távolság és az esemény jellege alapján kerül meghatározásra,
+        és az árajánlat részét képezi.
+      </p>
+
+      <h3>7.3. A tortaszállítás jellegéből adódó kockázatok</h3>
+      <p>
+        A Megrendelő tudomásul veszi, hogy a torta különösen érzékeny
+        termék — különösen melegben, illetve hosszabb úton. A Szolgáltató
+        a műhelyből történő kiadáskori állapotért felel. Amennyiben a
+        Megrendelő saját maga szállítja, az átvételt követő károkért
+        (deformáció, olvadás, törés) felelősséget nem vállalunk. A
+        szállítási útmutatót átvételkor átadjuk.
+      </p>
+
+      <h2 id="elallas">8. Elállási és felmondási jog</h2>
+
+      <h3>8.1. Korlátozott elállási jog</h3>
+      <p>
+        A 45/2014. (II. 26.) Korm. rendelet <strong>29. § (1) c) pontja
+        szerint</strong> az elállási jog nem gyakorolható olyan termék
+        tekintetében, amelyet a fogyasztó kifejezett kérése alapján
+        állítottak elő, illetve amely egyértelműen a fogyasztó személyére
+        szabott. Mivel a Szolgáltató minden tortát egyedi specifikáció
+        alapján készít, <strong>a Megrendelőt a klasszikus 14 napos
+        elállási jog nem illeti meg.</strong>
+      </p>
+
+      <h3>8.2. Lemondási feltételek</h3>
+      <p>
+        A Megrendelő ennek ellenére a megrendelést az alábbi feltételek
+        szerint lemondhatja:
+      </p>
+      <ul>
+        <li>
+          <strong>Az esemény előtt 30 nappal vagy korábban</strong>:
+          a foglaló 50%-a (22 500 Ft) visszajár; a fennmaradó rész
+          a kapacitás-lekötés ellentételezéseként a Szolgáltatót illeti
+        </li>
+        <li>
+          <strong>Az esemény előtt 14–30 napon belül</strong>: a foglaló
+          a Szolgáltatót illeti (Ptk. 6:185. §); visszafizetésre nem kerül
+        </li>
+        <li>
+          <strong>Az esemény előtt 14 napon belül</strong>: a teljes
+          vételár megfizetésre kötelezett, mivel ekkor már megkezdődött
+          az alapanyag-beszerzés és az előkészítés
+        </li>
+      </ul>
+      <p>
+        <strong>Időpontmódosítás</strong>: az esemény előtt legalább 14
+        nappal egyeztetve díjmentesen lehetséges, amennyiben a Szolgáltatónak
+        van szabad kapacitása az új időpontra.
+      </p>
+
+      <h2 id="hibas">9. Hibás teljesítés és szavatosság</h2>
+      <p>
+        A Szolgáltató kellékszavatossággal tartozik a Ptk. 6:159–6:167. §-ai
+        szerint. Amennyiben a termék nem felel meg a megrendelés szerinti
+        specifikációnak, a Megrendelő az alábbi igényekkel élhet:
+      </p>
+      <ul>
+        <li>Kijavítás (újra elkészítés, amennyiben időben lehetséges)</li>
+        <li>Árleszállítás</li>
+        <li>Súlyos hiba esetén elállás és a vételár visszafizetése</li>
+      </ul>
+      <p>
+        A hibát az átvételtől számított <strong>3 napon belül</strong>
+        írásban jelezni szükséges, fotódokumentációval. Frissességi
+        problémát, romlást a Szolgáltató kizárólag akkor ismer el, ha a
+        termék a megfelelő tárolási hőmérsékleten (4–8 °C) volt tartva,
+        és az átvételt követő 48 órán belül elfogyasztásra került.
+      </p>
+
+      <h2 id="allergen">10. Allergén és élelmiszer-biztonsági tájékoztatás</h2>
+      <p>
+        A műhelyben az alábbi főbb allergének előfordulhatnak: <strong>glutén,
+        tej, tojás, mogyoró és diófélék, szója</strong>. Bár a mentes
+        termékek külön munkafelületen készülnek, a teljes kereszt-szennyeződés
+        kizárása nem garantálható.
+      </p>
+      <p>
+        Súlyos allergiában szenvedők esetében a Szolgáltató fokozott
+        körültekintéssel jár el, de orvosi szintű mentességet nem tud
+        vállalni. Ilyen esetben a Megrendelő saját felelősségére rendel.
+      </p>
+      <p>
+        A termékek <strong>frissen készülnek</strong>, eltarthatóságuk
+        hűtve tárolva legfeljebb 48 óra. Ezen időszakon túli fogyasztásból
+        eredő károkért a Szolgáltató felelősséget nem vállal.
+      </p>
+
+      <h2 id="panasz">11. Panaszkezelés és jogviták</h2>
+
+      <h3>11.1. Panaszbejelentés</h3>
+      <p>
+        Panaszait írásban a <a href="mailto:lipcakefactory@gmail.com">lipcakefactory@gmail.com</a>
+        címre vagy postai úton a műhely címére küldheti. A bejelentésre
+        a kézhezvételtől számított <strong>30 napon belül</strong> érdemi
+        választ adunk.
+      </p>
+
+      <h3>11.2. Békéltető Testület</h3>
+      <p>Amennyiben a panaszkezelés során nem sikerül megegyezésre jutni, a Megrendelő (fogyasztó) a területileg illetékes Békéltető Testülethez fordulhat:</p>
+      <div class="legal-info-box">
+        <p>
+          <strong>Budapesti Békéltető Testület</strong><br />
+          Cím: 1016 Budapest, Krisztina krt. 99. III. em. 310.<br />
+          Levelezési cím: 1253 Budapest, Pf.: 10.<br />
+          Telefon: +36 1 488 2131<br />
+          E-mail: <a href="mailto:bekelteto.testulet@bkik.hu">bekelteto.testulet@bkik.hu</a><br />
+          Weboldal: <a href="https://bekeltet.bkik.hu" target="_blank" rel="noopener">bekeltet.bkik.hu</a>
+        </p>
+      </div>
+
+      <h3>11.3. Online vitarendezés (ODR)</h3>
+      <p>
+        Az Európai Unió online vitarendezési platformja elérhető a
+        <a href="https://ec.europa.eu/odr" target="_blank" rel="noopener">ec.europa.eu/odr</a>
+        címen.
+      </p>
+
+      <h3>11.4. Bírósági út</h3>
+      <p>
+        A jelen ÁSZF-ből eredő jogviták rendezésére a magyar bíróságok
+        rendelkeznek joghatósággal. A pertárgyérték függvényében a
+        Pesti Központi Kerületi Bíróság, illetve a Fővárosi Törvényszék
+        kizárólagos illetékességű.
+      </p>
+
+      <h2>12. Záró rendelkezések</h2>
+      <p>
+        A Szolgáltató fenntartja a jogot, hogy a jelen ÁSZF-et egyoldalúan
+        módosítsa. A módosítás a közzétételtől számított 8. napon lép
+        hatályba, és kizárólag az ezt követően leadott megrendelésekre
+        alkalmazandó.
+      </p>
+      <p>
+        Amennyiben a jelen ÁSZF valamely rendelkezése érvénytelennek
+        bizonyulna, az nem érinti a többi rendelkezés érvényességét. Az
+        érvénytelen rendelkezés helyébe a jogszabálynak leginkább megfelelő
+        rendelkezés lép.
+      </p>
+      <p style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--whisper); font-style: italic; opacity: 0.7;">
+        Kérdés esetén kérjük, írjon a <a href="mailto:lipcakefactory@gmail.com">lipcakefactory@gmail.com</a>
+        címre — minden megkeresésre érdemi választ adunk.
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">LipCake Factory<small>Tortaműhely · Est. 2021</small></div>
+          <p class="footer-tagline">...egy szelet boldogság, minden egyes alkalommal.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Műhely</h4>
+          <ul>
+            <li><a href="gyerek-tortak.html">Gyerek torták</a></li>
+            <li><a href="mentes-tortak.html">Mentes torták</a></li>
+            <li><a href="eskuvoi-tortak.html">Esküvői torták</a></li>
+            <li><a href="izlista.html">Ízek</a></li>
+            <li><a href="galeria.html">Galéria</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kapcsolat</h4>
+          <ul>
+            <li><a href="tel:+36304108605">+36 30 410 8605</a></li>
+            <li><a href="mailto:lipcakefactory@gmail.com">lipcakefactory@gmail.com</a></li>
+            <li><a href="https://www.facebook.com/lipcakefactory" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="https://instagram.com/lipcakefactory.tortamuhely" target="_blank" rel="noopener">Instagram</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Műhely cím</h4>
+          <p class="footer-contact-big">
+            1203 Budapest,<br />Vízisport u. 23/E.<br />
+            <span style="font-size:.85rem; color: var(--rose-soft); display:block; margin-top:.5rem;">Mediterrán Lakópark</span>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 LipCake Factory · Minden jog fenntartva</span>
+        <span><a href="adatkezeles.html">Adatkezelési</a> · <a href="aszf.html">ÁSZF</a> · <a href="https://aimpress.vibepreview.com" target="_blank" rel="noopener">Készítette: AImpress</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

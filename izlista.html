@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    /* Progressive enhancement: mark JS active (enables reveal animation).
+       Safety net: if the main script never runs, reveal everything anyway. */
+    document.documentElement.className += ' js';
+    addEventListener('load', function () {
+      setTimeout(function () {
+        if (!window.__lipReveal) {
+          var els = document.querySelectorAll('.reveal');
+          for (var i = 0; i < els.length; i++) els[i].classList.add('in');
+        }
+      }, 1500);
+    });
+  </script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ízlista — LipCake Factory</title>
+  <meta name="description" content="Az aktuális ízek a LipCake Factory tortáihoz — főzött alapú mascarpone krémek, belga csokoládé, gyümölcsvelők. Gyerek dizájn, mentes, nyers vegán és esküvői ízek." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Corben:wght@400;700&family=Cormorant:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Poiret+One&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav class="nav" aria-label="Főnavigáció">
+    <a href="index.html" class="nav-brand" aria-label="LipCake Factory Tortaműhely"><img class="nav-logo" src="https://tortamuhely.com/wp-content/uploads/2022/04/tortamuhely-retina.jpg" alt="LipCake Factory Tortaműhely" /></a>
+    <ul class="nav-menu">
+      <li><a href="gyerek-tortak.html">Gyerek torták</a></li>
+      <li><a href="mentes-tortak.html">Mentes</a></li>
+      <li><a href="eskuvoi-tortak.html">Esküvői</a></li>
+      <li><a href="izlista.html" class="active">Ízek</a></li>
+      <li><a href="galeria.html">Galéria</a></li>
+      <li class="menu-cta"><a href="rendeles.html">Rendelés</a></li>
+      <li class="menu-contact"><a href="tel:+36304108605">+36 30 410 8605</a></li>
+    </ul>
+    <span class="nav-cta-wrap"><a href="rendeles.html" class="nav-cta"><span>Rendelés</span></a></span>
+    <button class="nav-toggle" aria-label="Menü"><span></span><span></span><span></span></button>
+  </nav>
+
+  <header class="page-head container">
+    <span class="chapter-num reveal">— ízek</span>
+    <h1 class="reveal delay-1">
+      Válassz az<br /><em>ízek közül</em>
+    </h1>
+    <p class="lead reveal delay-2">
+      Minden krém főzött alapú, mascarpone teszi könnyeddé és selymessé.
+      Belga csokoládéból, 100%-os gyümölcsvelőkből és pirított magvakból.
+    </p>
+  </header>
+
+  <!-- Filozófia -->
+  <section class="flavor-intro">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-image reveal" style="aspect-ratio: 3/4;">
+          <img src="https://tortamuhely.com/wp-content/uploads/2024/11/RamiVirtu-504-768x1155.jpg"
+               alt="Tortaszelet közelről — rétegek" loading="lazy" />
+        </div>
+        <div class="story-text reveal delay-1">
+          <span class="eyebrow">A krémek filozófiája</span>
+          <h2 style="margin-top: 1rem;">
+            Négy réteg piskóta,<br />három réteg <em>krém</em>
+          </h2>
+          <p>
+            A torták a modern, magasított trendet követik: négy réteg piskóta
+            és három réteg krém alkotja őket, így nemcsak látványosak, hanem
+            igazán tartalmasak is.
+          </p>
+          <p>
+            Az ízeket minőségi belga csokoládéból, 100%-os gyümölcsvelőkből
+            és pirított magvakból álmodom meg — mindig egyedi kombinációban.
+            A főzött alapot mascarpone teszi könnyeddé.
+          </p>
+          <p style="font-size: .92rem; opacity: .8;">
+            Külön figyelek az ételérzékenyekre: <em>cukor-, laktóz-, tej-,
+            tojás- és gluténmentes</em> torták is készülnek. Gluténérzékenység
+            esetén a keresztszennyeződés teljes kizárását sajnos nem tudom
+            vállalni.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tortaméretek -->
+  <section class="container">
+    <div class="section-head">
+      <span class="chapter-num reveal">— méretek</span>
+      <h2 class="reveal delay-1">Torta<em>méretek</em></h2>
+    </div>
+    <div class="size-grid">
+      <div class="size-card reveal">
+        <div class="size-num">12</div>
+        <div class="size-label">szeletes</div>
+        <div class="size-dims">16 cm átmérő<br />15 cm magas</div>
+      </div>
+      <div class="size-card reveal delay-1">
+        <div class="size-num">16</div>
+        <div class="size-label">szeletes</div>
+        <div class="size-dims">20 cm átmérő<br />15 cm magas</div>
+      </div>
+      <div class="size-card reveal delay-2">
+        <div class="size-num">20</div>
+        <div class="size-label">szeletes</div>
+        <div class="size-dims">23 cm átmérő<br />15 cm magas</div>
+      </div>
+      <div class="size-card reveal delay-3">
+        <div class="size-num">24+</div>
+        <div class="size-label">emeletes</div>
+        <div class="size-dims">alsó szint 16,<br />felső szint 8 szelet</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ízkategóriák -->
+  <section class="container">
+    <div class="section-head">
+      <span class="chapter-num reveal">— az aktuális ízek</span>
+      <h2 class="reveal delay-1">Ízek <em>kategóriánként</em></h2>
+    </div>
+
+    <!-- Esküvői és design -->
+    <div class="flavor-category reveal">
+      <div class="flavor-image">
+        <img src="https://tortamuhely.com/wp-content/uploads/2024/11/RamiVirtu-504-768x1155.jpg"
+             alt="Esküvői torta" loading="lazy" />
+      </div>
+      <div class="flavor-body">
+        <h2>Design &amp; <em>esküvői torták</em></h2>
+        <p class="flavor-note">Főzött alapú mascarpone krémek, belga csokoládéval és gyümölcsvelőkkel.</p>
+        <ul class="flavor-list">
+          <li>Pisztácia – málna</li>
+          <li>Belga csoki – sós karamell</li>
+          <li>Vanília – fehércsoki – eper</li>
+          <li>Csokoládé – meggy</li>
+          <li>Citrom – lemon curd</li>
+          <li>Dió – mascarpone – sárgabarack</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Mousse -->
+    <div class="flavor-category reverse reveal">
+      <div class="flavor-image">
+        <img src="https://tortamuhely.com/wp-content/uploads/2025/08/A7_8028-Edit-2-768x1152.jpg"
+             alt="Mousse torta" loading="lazy" />
+      </div>
+      <div class="flavor-body">
+        <h2>Mousse <em>torták</em></h2>
+        <p class="flavor-note">Könnyed, habos textúra — a krémes torták légiesebb testvérei.</p>
+        <ul class="flavor-list">
+          <li>Sós karamell mousse</li>
+          <li>Somlói mousse</li>
+          <li>Túró – eper mousse</li>
+          <li>Kinder bueno mousse</li>
+          <li>Tripla csoki mousse</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Gyerek -->
+    <div class="flavor-category reveal">
+      <div class="flavor-image">
+        <img src="https://tortamuhely.com/wp-content/uploads/2025/08/A7_8405-Edit-2-1-768x1152.jpg"
+             alt="Gyerek torta" loading="lazy" />
+      </div>
+      <div class="flavor-body">
+        <h2>Gyerek <em>torták</em></h2>
+        <p class="flavor-note">Kedvelt, barátságos ízek a legkisebbeknek — nem túl édesen.</p>
+        <ul class="flavor-list">
+          <li>Tejcsoki – mascarpone</li>
+          <li>Krémtúró – eper</li>
+          <li>Mascarpone – erdei gyümölcs</li>
+          <li>Répatorta</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Mentes és vegán -->
+    <div class="flavor-category reverse reveal">
+      <div class="flavor-image">
+        <img src="https://tortamuhely.com/wp-content/uploads/2025/08/7FC98979-ADA4-4A16-89F5-ACFAE9091D1F-768x1024.jpg"
+             alt="Mentes és vegán torta" loading="lazy" />
+      </div>
+      <div class="flavor-body">
+        <h2>Mentes &amp; nyers <em>vegán</em></h2>
+        <p class="flavor-note">Mindenkinek jut egy szelet boldogság — kompromisszum nélkül.</p>
+
+        <div class="flavor-subhead">Tej-, cukor-, tojás-, gluténmentes · mousse jellegű (10–12–16 szelet)</div>
+        <ul class="flavor-list">
+          <li>Eper – málna – pisztácia</li>
+          <li>Csoki – málnahab <span class="flavor-tag">tojást tartalmaz</span></li>
+          <li>Banoffee</li>
+          <li>Dupla csoki</li>
+          <li>Sós karamell</li>
+        </ul>
+
+        <div class="flavor-subhead">Nyers vegán · kesudió és datolya alapú, glutén- és cukormentes (10–12–16 szelet)</div>
+        <ul class="flavor-list">
+          <li>Csokoládé <span class="flavor-tag">vegán</span></li>
+          <li>Kókusz – mangó – fehércsoki <span class="flavor-tag">vegán</span></li>
+          <li>Málna – csoki <span class="flavor-tag">vegán</span></li>
+          <li>Eper – lime <span class="flavor-tag">vegán</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container narrow">
+      <span class="chapter-num reveal">— foglalás</span>
+      <h2 class="reveal delay-1">Megvan a <em>kedvenc?</em></h2>
+      <p class="reveal delay-2">
+        Az ízeket a rendelés során is kiválaszthatod — vagy kérj kóstoló boxot előre.
+      </p>
+      <div class="reveal delay-3">
+        <a href="rendeles.html" class="btn"><span>Rendelés indítása</span><span class="btn-arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">LipCake Factory<small>Tortaműhely · Est. 2021</small></div>
+          <p class="footer-tagline">...egy szelet boldogság, minden egyes alkalommal.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Műhely</h4>
+          <ul>
+            <li><a href="gyerek-tortak.html">Gyerek torták</a></li>
+            <li><a href="mentes-tortak.html">Mentes torták</a></li>
+            <li><a href="eskuvoi-tortak.html">Esküvői torták</a></li>
+            <li><a href="izlista.html">Ízek</a></li>
+            <li><a href="galeria.html">Galéria</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kapcsolat</h4>
+          <ul>
+            <li><a href="tel:+36304108605">+36 30 410 8605</a></li>
+            <li><a href="mailto:lipcakefactory@gmail.com">lipcakefactory@gmail.com</a></li>
+            <li><a href="https://www.facebook.com/lipcakefactory" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="https://instagram.com/lipcakefactory.tortamuhely" target="_blank" rel="noopener">Instagram</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Műhely cím</h4>
+          <p class="footer-contact-big">
+            1203 Budapest,<br />Vízisport u. 23/E.<br />
+            <span style="font-size:.85rem; color: var(--rose-soft); display:block; margin-top:.5rem;">Mediterrán Lakópark</span>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 LipCake Factory · Minden jog fenntartva</span>
+        <span><a href="adatkezeles.html">Adatkezelési</a> · <a href="aszf.html">ÁSZF</a> · <a href="https://aimpress.vibepreview.com" target="_blank" rel="noopener">Készítette: AImpress</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

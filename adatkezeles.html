@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    /* Progressive enhancement: mark JS active (enables reveal animation).
+       Safety net: if the main script never runs, reveal everything anyway. */
+    document.documentElement.className += ' js';
+    addEventListener('load', function () {
+      setTimeout(function () {
+        if (!window.__lipReveal) {
+          var els = document.querySelectorAll('.reveal');
+          for (var i = 0; i < els.length; i++) els[i].classList.add('in');
+        }
+      }, 1500);
+    });
+  </script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adatkezelési tájékoztató — LipCake Factory</title>
+  <meta name="description" content="A LipCake Factory Tortaműhely adatkezelési tájékoztatója — GDPR-megfelelő tájékoztatás a személyes adatok kezeléséről." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Corben:wght@400;700&family=Cormorant:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Poiret+One&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav class="nav" aria-label="Főnavigáció">
+    <a href="index.html" class="nav-brand" aria-label="LipCake Factory Tortaműhely"><img class="nav-logo" src="https://tortamuhely.com/wp-content/uploads/2022/04/tortamuhely-retina.jpg" alt="LipCake Factory Tortaműhely" /></a>
+    <ul class="nav-menu">
+      <li><a href="gyerek-tortak.html">Gyerek torták</a></li>
+      <li><a href="mentes-tortak.html">Mentes</a></li>
+      <li><a href="eskuvoi-tortak.html">Esküvői</a></li>
+      <li><a href="izlista.html">Ízek</a></li>
+      <li><a href="galeria.html">Galéria</a></li>
+      <li class="menu-cta"><a href="rendeles.html">Rendelés</a></li>
+      <li class="menu-contact"><a href="tel:+36304108605">+36 30 410 8605</a></li>
+    </ul>
+    <span class="nav-cta-wrap"><a href="rendeles.html" class="nav-cta"><span>Rendelés</span></a></span>
+    <button class="nav-toggle" aria-label="Menü"><span></span><span></span><span></span></button>
+  </nav>
+
+  <section class="legal-page container">
+    <div class="legal-content">
+      <span class="chapter-num">— jogi információk</span>
+      <h1 class="display-l" style="margin-top: 1rem; margin-bottom: 1rem;">
+        Adatkezelési<br /><em>tájékoztató</em>
+      </h1>
+      <p class="legal-meta">Hatályos: 2026. január 1-től · Verzió: 1.0</p>
+
+      <div class="legal-toc">
+        <h4>Tartalomjegyzék</h4>
+        <ol>
+          <li><a href="#bevezeto">Bevezető</a></li>
+          <li><a href="#adatkezelo">Az adatkezelő adatai</a></li>
+          <li><a href="#adatfeldolgozok">Adatfeldolgozók</a></li>
+          <li><a href="#adatok-kore">A kezelt adatok köre és célja</a></li>
+          <li><a href="#jogalap">Az adatkezelés jogalapja</a></li>
+          <li><a href="#idotartam">Adatkezelés időtartama</a></li>
+          <li><a href="#biztonsag">Adatbiztonság</a></li>
+          <li><a href="#sutik">Sütik (cookies)</a></li>
+          <li><a href="#jogok">Az érintettek jogai</a></li>
+          <li><a href="#jogorvoslat">Jogorvoslati lehetőségek</a></li>
+        </ol>
+      </div>
+
+      <h2 id="bevezeto">1. Bevezető</h2>
+      <p>
+        A jelen tájékoztató célja, hogy átláthatóan bemutassa, milyen személyes
+        adatokat kezelünk, milyen célból, milyen jogalapon és mennyi ideig,
+        amikor Ön a <a href="index.html">LipCake Factory</a> weboldalát böngészi,
+        kapcsolatba lép velünk, vagy tortát rendel tőlünk.
+      </p>
+      <p>
+        Az adatkezelés során a <strong>2016/679 EU rendelet (GDPR)</strong>, az
+        <strong>információs önrendelkezési jogról és az információszabadságról
+        szóló 2011. évi CXII. törvény</strong> (Infotv.), valamint az
+        <strong>elektronikus kereskedelmi szolgáltatásokról szóló 2001. évi
+        CVIII. törvény</strong> (Eker.tv.) előírásait tartjuk be.
+      </p>
+
+      <h2 id="adatkezelo">2. Az adatkezelő adatai</h2>
+      <div class="legal-info-box">
+        <p>
+          <strong>Adatkezelő neve:</strong> Keléné Lipka Tímea<br />
+          <strong>Vállalkozás neve:</strong> LipCake Factory Tortaműhely<br />
+          <strong>Levelezési cím:</strong> 1203 Budapest, Vízisport u. 23/E. (Mediterrán Lakópark)<br />
+          <strong>Telefon:</strong> <a href="tel:+36304108605">+36 30 410 8605</a><br />
+          <strong>E-mail:</strong> <a href="mailto:lipcakefactory@gmail.com">lipcakefactory@gmail.com</a><br />
+          <strong>Weboldal:</strong> <a href="index.html">tortamuhely.com</a>
+        </p>
+      </div>
+      <p>
+        Az Adatkezelő nem alkalmaz külön adatvédelmi tisztviselőt (DPO-t),
+        mivel tevékenysége nem éri el a GDPR 37. cikke szerinti kötelező
+        kinevezési küszöböt. Az adatkezeléssel kapcsolatos kérdéseit
+        közvetlenül a fenti elérhetőségeken jelezheti.
+      </p>
+
+      <h2 id="adatfeldolgozok">3. Adatfeldolgozók</h2>
+      <p>
+        Az alábbi szolgáltatók — mint Adatfeldolgozók — közreműködnek a
+        weboldal és a rendelési folyamat üzemeltetésében. Mindegyikkel
+        adatfeldolgozói szerződés van érvényben.
+      </p>
+
+      <h3>3.1. Weboldal és webshop technikai üzemeltetése</h3>
+      <div class="legal-info-box">
+        <p>
+          <strong>Név:</strong> Stubán Lukács egyéni vállalkozó<br />
+          <strong>Márkanév:</strong> AImpress<br />
+          <strong>Székhely:</strong> 9023 Győr, Blaha Lujza utca 2. em. 1. ajtó 1.<br />
+          <strong>Nyilvántartási szám:</strong> 61277230<br />
+          <strong>Adószám:</strong> 90024908-1-28<br />
+          <strong>Tevékenység:</strong> 621004 — Weblap tervezése (webdizájn)<br />
+          <strong>Feladat:</strong> a tortamuhely.com weboldal és webshop technikai
+          üzemeltetése, karbantartása, fejlesztése
+        </p>
+      </div>
+
+      <h3>3.2. Tárhelyszolgáltatás</h3>
+      <p>
+        A weboldal és a hozzá kapcsolódó adatbázis tárhelye biztonságos,
+        EU-s adatközpontban van elhelyezve. A tárhelyszolgáltató a megfelelő
+        technikai és szervezési biztonsági intézkedéseket alkalmazza a
+        személyes adatok védelmére.
+      </p>
+
+      <h3>3.3. Fizetési szolgáltató</h3>
+      <p>
+        Az online bankkártyás fizetést a <strong>Stripe Payments Europe Ltd.</strong>
+        (1 Grand Canal Street Lower, Grand Canal Dock, Dublin, Írország) biztosítja.
+        A Stripe önálló adatkezelőként kezeli a kártyaadatokat — ezekhez sem
+        az Adatkezelő, sem az AImpress nem fér hozzá. A Stripe adatkezelési
+        tájékoztatója elérhető: <a href="https://stripe.com/hu/privacy" target="_blank" rel="noopener">stripe.com/hu/privacy</a>
+      </p>
+
+      <h3>3.4. Számlázás</h3>
+      <p>
+        A számlák kiállítását a <strong>Számlázz.hu</strong> rendszer
+        (KBOSS.hu Kft., 1031 Budapest, Záhony utca 7.) biztosítja. A
+        számlázáshoz szükséges adatok (név, számlázási cím, e-mail) a
+        szolgáltató rendszerében kerülnek tárolásra a számviteli törvény
+        által előírt 8 évig.
+      </p>
+
+      <h3>3.5. Automatizációs platform</h3>
+      <p>
+        A rendelési folyamat automatizálását a <strong>Make.com</strong>
+        (Celonis SE — Theresienstraße 6, 80333 München, Németország)
+        platformja végzi. A platform EU-s szervereken üzemel, GDPR-megfelelő
+        adatfeldolgozói szerződéssel.
+      </p>
+
+      <h3>3.6. Levelezés és kapcsolattartás</h3>
+      <p>
+        Az e-mailes kommunikációhoz a <strong>Google Workspace</strong>
+        (Google Ireland Ltd., Gordon House, Barrow Street, Dublin 4, Írország)
+        szolgáltatást használjuk. A Google a kommunikációhoz szükséges
+        kommunikációs adatokat kizárólag a szolgáltatás nyújtásához
+        szükséges mértékben kezeli.
+      </p>
+
+      <h2 id="adatok-kore">4. A kezelt adatok köre és célja</h2>
+
+      <h3>4.1. Kapcsolatfelvétel</h3>
+      <p>Amikor Ön telefonon, e-mailben, vagy űrlap útján felveszi velünk a kapcsolatot:</p>
+      <ul>
+        <li><strong>Név</strong> — a kapcsolattartás személyre szabásához</li>
+        <li><strong>E-mail cím</strong> — a válaszadáshoz</li>
+        <li><strong>Telefonszám</strong> — gyors egyeztetéshez (opcionális)</li>
+        <li><strong>Üzenet tartalma</strong> — az érdemi válaszadáshoz</li>
+      </ul>
+
+      <h3>4.2. Megrendelés</h3>
+      <p>Tortarendelés esetén a fentieken túl:</p>
+      <ul>
+        <li><strong>Esemény dátuma és típusa</strong> — a megrendelés teljesítéséhez</li>
+        <li><strong>Ízpreferenciák és allergén-igények</strong> — a torta elkészítéséhez</li>
+        <li><strong>Egyedi kérések</strong> — a személyre szabott kivitelezéshez</li>
+        <li><strong>Számlázási adatok</strong> (név, cím) — a számla kiállításához</li>
+      </ul>
+
+      <h3>4.3. Fizetés</h3>
+      <p>
+        A bankkártyaadatokat <strong>nem mi kezeljük</strong> — ezek
+        közvetlenül a Stripe rendszerében kerülnek feldolgozásra. Mi
+        kizárólag a tranzakció eredményéről kapunk visszajelzést (sikeres/
+        sikertelen, tranzakció-azonosító).
+      </p>
+
+      <h3>4.4. Weboldal-látogatás</h3>
+      <p>
+        A weboldal látogatásakor a böngészője által automatikusan küldött
+        technikai adatokat (IP-cím, böngésző típusa, látogatás időpontja)
+        kizárólag biztonsági célból és anonimizált statisztikákhoz kezeljük.
+        Ezek konkrét személyhez nem köthetők.
+      </p>
+
+      <h2 id="jogalap">5. Az adatkezelés jogalapja</h2>
+      <p>Az adatkezelés a GDPR 6. cikke alapján a következő jogalapokon történik:</p>
+      <ul>
+        <li>
+          <strong>Szerződés teljesítése</strong> (GDPR 6. cikk (1) b.) —
+          a megrendelés, számlázás, és a tortaszállítás teljesítéséhez
+          szükséges adatok kezelése
+        </li>
+        <li>
+          <strong>Jogi kötelezettség teljesítése</strong> (GDPR 6. cikk (1) c.) —
+          a számviteli, adózási, és fogyasztóvédelmi előírások szerint
+          megőrzendő adatok kezelése
+        </li>
+        <li>
+          <strong>Jogos érdek</strong> (GDPR 6. cikk (1) f.) — a weboldal
+          biztonságos üzemeltetéséhez szükséges technikai adatok kezelése
+        </li>
+        <li>
+          <strong>Hozzájárulás</strong> (GDPR 6. cikk (1) a.) — a marketing
+          célú adatkezelés (hírlevél), valamint a nem-szükséges sütik használata
+        </li>
+      </ul>
+
+      <h2 id="idotartam">6. Az adatkezelés időtartama</h2>
+      <ul>
+        <li>
+          <strong>Kapcsolatfelvétel</strong>: legfeljebb 1 év a megkereséstől
+          számítva, vagy az ügylet lezárásáig (amelyik később következik be)
+        </li>
+        <li>
+          <strong>Megrendelési adatok</strong>: a rendelés teljesítését követő
+          5 évig (Ptk. szerinti általános elévülés)
+        </li>
+        <li>
+          <strong>Számlázási adatok</strong>: a számvitelről szóló 2000. évi
+          C. törvény szerint 8 évig
+        </li>
+        <li>
+          <strong>Hírlevél</strong>: a leiratkozásig
+        </li>
+        <li>
+          <strong>Süti-adatok</strong>: a süti élettartamának végéig, vagy a
+          böngésző-előzmények törléséig
+        </li>
+      </ul>
+
+      <h2 id="biztonsag">7. Adatbiztonság</h2>
+      <p>
+        A személyes adatok védelme érdekében az alábbi technikai és
+        szervezési intézkedéseket alkalmazzuk:
+      </p>
+      <ul>
+        <li>SSL-titkosítás (HTTPS) a teljes weboldalon</li>
+        <li>Erős jelszavak és kétfaktoros hitelesítés (2FA) az adminisztrációs felületekhez</li>
+        <li>Rendszeres biztonsági frissítések és sebezhetőség-vizsgálat</li>
+        <li>Hozzáférés-korlátozás: csak az adatkezelő és az adatfeldolgozók azon munkatársai férnek hozzá az adatokhoz, akiknek erre munkájukhoz szükségük van</li>
+        <li>Rendszeres mentések titkosított formában</li>
+      </ul>
+
+      <h2 id="sutik">8. Sütik (cookies)</h2>
+      <p>
+        A weboldal két típusú sütit használ. <strong>Szükséges sütik</strong>:
+        a weboldal alapfunkcióinak (pl. nyelvválasztás, kosártartalom)
+        megfelelő működéséhez kellenek — ezek nem tartoznak hozzájárulás
+        alá. <strong>Elemzési sütik</strong>: a felhasználói élmény javítása
+        érdekében anonim statisztikai adatokat gyűjtenek. Ezeket csak az Ön
+        kifejezett hozzájárulása esetén alkalmazzuk.
+      </p>
+      <p>
+        A süti-beállításokat a böngészőjében bármikor módosíthatja, illetve
+        a süti-tájékoztató sávban is megváltoztathatja.
+      </p>
+
+      <h2 id="jogok">9. Az érintettek jogai</h2>
+      <p>A GDPR alapján Önt az alábbi jogok illetik meg személyes adatai kezelésével kapcsolatban:</p>
+      <ul>
+        <li><strong>Tájékoztatáshoz való jog</strong> — információt kérhet a kezelt adatairól</li>
+        <li><strong>Hozzáférés joga</strong> — másolatot kérhet a kezelt adatairól</li>
+        <li><strong>Helyesbítéshez való jog</strong> — pontatlan adatait javíthatjuk</li>
+        <li><strong>Törléshez való jog</strong> ("elfeledtetéshez való jog") — adatait kérelmére töröljük, ha azok kezelése már nem szükséges</li>
+        <li><strong>Adatkezelés korlátozásához való jog</strong> — bizonyos esetekben kérheti az adatkezelés ideiglenes szüneteltetését</li>
+        <li><strong>Adathordozhatósághoz való jog</strong> — adatait géppel olvasható formátumban kérheti</li>
+        <li><strong>Tiltakozáshoz való jog</strong> — a jogos érdeken alapuló adatkezelés ellen</li>
+        <li><strong>Hozzájárulás visszavonásához való jog</strong> — bármikor, indoklás nélkül</li>
+      </ul>
+      <p>
+        Kérelmét a <a href="mailto:lipcakefactory@gmail.com">lipcakefactory@gmail.com</a>
+        e-mail címen vagy a 2. pontban megjelölt postacímen jelezheti.
+        Kérésére a kézhezvételtől számított <strong>legfeljebb 30 napon
+        belül</strong> érdemi választ adunk.
+      </p>
+
+      <h2 id="jogorvoslat">10. Jogorvoslati lehetőségek</h2>
+      <p>
+        Amennyiben úgy érzi, hogy adatkezelésünk nem felel meg a
+        jogszabályoknak, panaszt nyújthat be a felügyeleti hatósághoz:
+      </p>
+      <div class="legal-info-box">
+        <p>
+          <strong>Nemzeti Adatvédelmi és Információszabadság Hatóság (NAIH)</strong><br />
+          Cím: 1055 Budapest, Falk Miksa utca 9-11.<br />
+          Postacím: 1363 Budapest, Pf.: 9.<br />
+          Telefon: +36 1 391 1400<br />
+          E-mail: <a href="mailto:ugyfelszolgalat@naih.hu">ugyfelszolgalat@naih.hu</a><br />
+          Weboldal: <a href="https://naih.hu" target="_blank" rel="noopener">naih.hu</a>
+        </p>
+      </div>
+      <p>
+        Jogainak megsértése esetén bírósághoz is fordulhat. A perre az
+        Ön lakóhelye szerinti törvényszék illetékes.
+      </p>
+
+      <h2>11. Záró rendelkezések</h2>
+      <p>
+        A jelen tájékoztatót jogosultak vagyunk egyoldalúan, indoklás
+        nélkül módosítani. A módosításokról a weboldalon keresztül
+        tájékoztatjuk a felhasználókat. A módosított tájékoztató közzétételétől
+        számított 8 nap elteltével lép hatályba.
+      </p>
+      <p style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--whisper); font-style: italic; opacity: 0.7;">
+        Ha bármilyen kérdése van az adatkezeléssel kapcsolatban, kérjük,
+        vegye fel velünk a kapcsolatot a <a href="mailto:lipcakefactory@gmail.com">lipcakefactory@gmail.com</a>
+        címen — készséggel segítünk.
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">LipCake Factory<small>Tortaműhely · Est. 2021</small></div>
+          <p class="footer-tagline">...egy szelet boldogság, minden egyes alkalommal.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Műhely</h4>
+          <ul>
+            <li><a href="gyerek-tortak.html">Gyerek torták</a></li>
+            <li><a href="mentes-tortak.html">Mentes torták</a></li>
+            <li><a href="eskuvoi-tortak.html">Esküvői torták</a></li>
+            <li><a href="izlista.html">Ízek</a></li>
+            <li><a href="galeria.html">Galéria</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kapcsolat</h4>
+          <ul>
+            <li><a href="tel:+36304108605">+36 30 410 8605</a></li>
+            <li><a href="mailto:lipcakefactory@gmail.com">lipcakefactory@gmail.com</a></li>
+            <li><a href="https://www.facebook.com/lipcakefactory" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="https://instagram.com/lipcakefactory.tortamuhely" target="_blank" rel="noopener">Instagram</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Műhely cím</h4>
+          <p class="footer-contact-big">
+            1203 Budapest,<br />Vízisport u. 23/E.<br />
+            <span style="font-size:.85rem; color: var(--rose-soft); display:block; margin-top:.5rem;">Mediterrán Lakópark</span>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 LipCake Factory · Minden jog fenntartva</span>
+        <span><a href="adatkezeles.html">Adatkezelési</a> · <a href="aszf.html">ÁSZF</a> · <a href="https://aimpress.vibepreview.com" target="_blank" rel="noopener">Készítette: AImpress</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

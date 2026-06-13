@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    document.documentElement.className += ' js';
+    addEventListener('load', function () {
+      setTimeout(function () {
+        if (!window.__lipReveal) {
+          var els = document.querySelectorAll('.reveal');
+          for (var i = 0; i < els.length; i++) els[i].classList.add('in');
+        }
+      }, 1500);
+    });
+  </script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mentes torták — LipCake Factory</title>
+  <meta name="description" content="Tej-, cukor-, tojás- és gluténmentes, valamint nyers vegán torták — kompromisszum nélkül. Kesudió- és datolyaalapú nyers vegán különlegességek, mindig frissen, személyre szabva." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Corben:wght@400;700&family=Cormorant:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Poiret+One&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav class="nav" aria-label="Főnavigáció">
+    <a href="index.html" class="nav-brand" aria-label="LipCake Factory Tortaműhely"><img class="nav-logo" src="https://tortamuhely.com/wp-content/uploads/2022/04/tortamuhely-retina.jpg" alt="LipCake Factory Tortaműhely" /></a>
+    <ul class="nav-menu">
+      <li><a href="gyerek-tortak.html">Gyerek torták</a></li>
+      <li><a href="mentes-tortak.html" class="active">Mentes</a></li>
+      <li><a href="eskuvoi-tortak.html">Esküvői</a></li>
+      <li><a href="izlista.html">Ízek</a></li>
+      <li><a href="galeria.html">Galéria</a></li>
+      <li class="menu-cta"><a href="rendeles.html">Rendelés</a></li>
+      <li class="menu-contact"><a href="tel:+36304108605">+36 30 410 8605</a></li>
+    </ul>
+    <span class="nav-cta-wrap"><a href="rendeles.html" class="nav-cta"><span>Rendelés</span></a></span>
+    <button class="nav-toggle" aria-label="Menü"><span></span><span></span><span></span></button>
+  </nav>
+
+  <header class="page-head container">
+    <span class="eyebrow reveal">Válaszd te is</span>
+    <h1 class="reveal delay-1">
+      Mentes<br /><em>tortáimat</em>
+    </h1>
+    <p class="lead reveal delay-2">
+      Mindenkinek jut egy szelet boldogság — kompromisszum nélkül.
+    </p>
+  </header>
+
+  <section class="container">
+    <div class="story-grid">
+      <div class="story-image reveal" style="aspect-ratio: 4/5;">
+        <img src="https://tortamuhely.com/wp-content/uploads/2025/08/A7_8028-Edit-2-scaled.jpg"
+             alt="Mentes design torta" loading="lazy" />
+      </div>
+      <div class="story-text reveal delay-1">
+        <span class="eyebrow">Ételérzékenyeknek is</span>
+        <h2 style="margin-top: 1rem;">
+          Tej-, cukor-, tojás- és <em>gluténmentes</em>
+        </h2>
+        <p>
+          Külön figyelek az ételérzékenyekre: <em>tej-, cukor-, tojás- és
+          gluténmentes</em>, sőt <em>nyers vegán</em> torták is rendelhetők,
+          mindig frissen és személyre szabva.
+        </p>
+        <p>
+          A nyers vegán torták kesudió- és datolyaalapúak, glutén- és
+          cukormentesek — könnyed, mégis krémes textúrával.
+        </p>
+        <p style="font-size: .95rem; opacity: .82;">
+          Gluténérzékenység esetén a keresztszennyeződés teljes kizárását
+          sajnos nem tudom vállalni. Minden torta megrendelésre készül,
+          fix árlista helyett személyre szabott árajánlattal.
+        </p>
+        <div style="margin-top: 2rem;">
+          <a href="rendeles.html" class="btn"><span>Rendelés indítása</span><span class="btn-arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ízek -->
+  <section class="container">
+    <div class="section-head">
+      <span class="eyebrow reveal">Az aktuális mentes ízek</span>
+      <h2 class="reveal delay-1">Mentes <em>ízek</em></h2>
+    </div>
+
+    <div class="flavor-category reveal">
+      <div class="flavor-image">
+        <img src="https://tortamuhely.com/wp-content/uploads/2025/08/7FC98979-ADA4-4A16-89F5-ACFAE9091D1F-768x1024.jpg"
+             alt="Mentes torta szelet" loading="lazy" />
+      </div>
+      <div class="flavor-body">
+        <h2>Tej-, cukor-, tojás-, <em>gluténmentes</em></h2>
+        <p class="flavor-note">Mousse jellegű torták (10–12–16 szelet).</p>
+        <ul class="flavor-list">
+          <li>Eper – málna – pisztácia</li>
+          <li>Csoki – málnahab <span class="flavor-tag">tojást tartalmaz</span></li>
+          <li>Banoffee</li>
+          <li>Dupla csoki</li>
+          <li>Sós karamell</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="flavor-category reverse reveal">
+      <div class="flavor-image">
+        <img src="https://tortamuhely.com/wp-content/uploads/2025/08/A7_8075-Edit-1-scaled.jpg"
+             alt="Nyers vegán torta" loading="lazy" />
+      </div>
+      <div class="flavor-body">
+        <h2>Nyers <em>vegán</em></h2>
+        <p class="flavor-note">Kesudió- és datolyaalapú, glutén- és cukormentes (10–12–16 szelet).</p>
+        <ul class="flavor-list">
+          <li>Csokoládé <span class="flavor-tag">vegán</span></li>
+          <li>Kókusz – mangó – fehércsoki <span class="flavor-tag">vegán</span></li>
+          <li>Málna – csoki <span class="flavor-tag">vegán</span></li>
+          <li>Eper – lime <span class="flavor-tag">vegán</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container narrow">
+      <span class="eyebrow reveal">Foglalás</span>
+      <h2 class="reveal delay-1">Mentes, de <em>nem ízetlen.</em></h2>
+      <p class="reveal delay-2">
+        Mondd el, milyen érzékenységgel készülsz — megtaláljuk a hozzád illő ízt.
+      </p>
+      <div class="reveal delay-3">
+        <a href="rendeles.html" class="btn"><span>Rendelés indítása</span><span class="btn-arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">LipCake Factory<small>Tortaműhely · Est. 2021</small></div>
+          <p class="footer-tagline">...egy szelet boldogság, minden egyes alkalommal.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Műhely</h4>
+          <ul>
+            <li><a href="gyerek-tortak.html">Gyerek torták</a></li>
+            <li><a href="mentes-tortak.html">Mentes torták</a></li>
+            <li><a href="eskuvoi-tortak.html">Esküvői torták</a></li>
+            <li><a href="izlista.html">Ízek</a></li>
+            <li><a href="galeria.html">Galéria</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kapcsolat</h4>
+          <ul>
+            <li><a href="tel:+36304108605">+36 30 410 8605</a></li>
+            <li><a href="mailto:lipcakefactory@gmail.com">lipcakefactory@gmail.com</a></li>
+            <li><a href="https://www.facebook.com/lipcakefactory" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="https://instagram.com/lipcakefactory.tortamuhely" target="_blank" rel="noopener">Instagram</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Műhely cím</h4>
+          <p class="footer-contact-big">
+            1203 Budapest,<br />Vízisport u. 23/E.<br />
+            <span style="font-size:.85rem; color: var(--rose-soft); display:block; margin-top:.5rem;">Mediterrán Lakópark</span>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 LipCake Factory · Minden jog fenntartva</span>
+        <span><a href="adatkezeles.html">Adatkezelési</a> · <a href="aszf.html">ÁSZF</a> · <a href="https://aimpress.vibepreview.com" target="_blank" rel="noopener">Készítette: AImpress</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

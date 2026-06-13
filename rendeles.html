@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    /* Progressive enhancement: mark JS active (enables reveal animation).
+       Safety net: if the main script never runs, reveal everything anyway. */
+    document.documentElement.className += ' js';
+    addEventListener('load', function () {
+      setTimeout(function () {
+        if (!window.__lipReveal) {
+          var els = document.querySelectorAll('.reveal');
+          for (var i = 0; i < els.length; i++) els[i].classList.add('in');
+        }
+      }, 1500);
+    });
+  </script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rendelés — LipCake Factory</title>
+  <meta name="description" content="Válaszd ki a tortád típusát, foglald le a dátumot és add le a rendelésed online. Személyre szabott árajánlat, gyerek dizájn és mentes torták — Budapest." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Corben:wght@400;700&family=Cormorant:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Poiret+One&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" aria-label="Főnavigáció">
+    <a href="index.html" class="nav-brand" aria-label="LipCake Factory Tortaműhely"><img class="nav-logo" src="https://tortamuhely.com/wp-content/uploads/2022/04/tortamuhely-retina.jpg" alt="LipCake Factory Tortaműhely" /></a>
+    <ul class="nav-menu">
+      <li><a href="gyerek-tortak.html">Gyerek torták</a></li>
+      <li><a href="mentes-tortak.html">Mentes</a></li>
+      <li><a href="eskuvoi-tortak.html">Esküvői</a></li>
+      <li><a href="izlista.html">Ízek</a></li>
+      <li><a href="galeria.html">Galéria</a></li>
+      <li class="menu-cta"><a href="rendeles.html">Rendelés</a></li>
+      <li class="menu-contact"><a href="tel:+36304108605">+36 30 410 8605</a></li>
+    </ul>
+    <span class="nav-cta-wrap">
+      <a href="rendeles.html" class="nav-cta">
+        <span>Rendelés</span>
+      </a>
+    </span>
+    <button class="nav-toggle" aria-label="Menü"><span></span><span></span><span></span></button>
+  </nav>
+
+  <!-- PAGE HEAD -->
+  <header class="page-head container">
+    <span class="chapter-num reveal">— rendelés</span>
+    <h1 class="reveal delay-1">
+      Rendeld meg<br /><em>a tortádat</em>
+    </h1>
+    <p class="lead reveal delay-2">
+      Négy egyszerű lépés. Először válaszd ki a tortád típusát,
+      majd a dátumot — a fizetés csak ezután.
+    </p>
+  </header>
+
+  <!-- ORDER FLOW -->
+  <section class="container" data-order-form>
+    <div class="stepper">
+      <div class="step active">
+        <span class="step-num">1</span>
+        <span class="step-label">Termék</span>
+      </div>
+      <div class="step">
+        <span class="step-num">2</span>
+        <span class="step-label">Dátum</span>
+      </div>
+      <div class="step">
+        <span class="step-num">3</span>
+        <span class="step-label">Adatok</span>
+      </div>
+      <div class="step">
+        <span class="step-num">4</span>
+        <span class="step-label">Fizetés</span>
+      </div>
+    </div>
+
+    <!-- ===== STEP 1: Product ===== -->
+    <div class="step-panel active">
+      <div class="text-center" style="margin-bottom: 3rem;">
+        <h2 class="display-l reveal">
+          Milyen <em>alkalomra</em>?
+        </h2>
+        <p class="lead reveal delay-1" style="margin: 1rem auto 0;">
+          Válaszd ki, ami a legjobban illik az eseményhez.
+          Ha különleges igényed van, a végén tudsz írni róla.
+        </p>
+      </div>
+
+      <div class="product-options narrow">
+        <div class="product-option" data-product="wedding">
+          <img src="https://tortamuhely.com/wp-content/uploads/2022/04/EC2_08081-724x1024.jpg"
+               alt="Esküvői torta" loading="lazy" />
+          <div class="product-option-overlay">
+            <h3>Esküvői torta</h3>
+            <p>Naked, burkolt, többszintes</p>
+          </div>
+        </div>
+
+        <div class="product-option" data-product="birthday">
+          <img src="https://tortamuhely.com/wp-content/uploads/2025/08/A7_8483-Edit-scaled.jpg"
+               alt="Születésnapi torta" loading="lazy" />
+          <div class="product-option-overlay">
+            <h3>Születésnapi torta</h3>
+            <p>Egyedi téma, design</p>
+          </div>
+        </div>
+
+        <div class="product-option" data-product="allergy">
+          <img src="https://tortamuhely.com/wp-content/uploads/2025/08/A7_8028-Edit-2-scaled.jpg"
+               alt="Mentes torta" loading="lazy" />
+          <div class="product-option-overlay">
+            <h3>Mentes torta</h3>
+            <p>Glutén-, tej-, tojás- vagy cukormentes</p>
+          </div>
+        </div>
+
+        <div class="product-option" data-product="other">
+          <img src="https://tortamuhely.com/wp-content/uploads/2025/08/A7_8075-Edit-1-scaled.jpg"
+               alt="Egyedi torta" loading="lazy" />
+          <div class="product-option-overlay">
+            <h3>Egyedi konzultáció</h3>
+            <p>Babaváró, keresztelő, eljegyzés</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-nav">
+        <span></span>
+        <button type="button" class="btn" data-next>
+          <span>Tovább a dátumhoz</span>
+          <span class="btn-arrow">→</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ===== STEP 2: Calendar ===== -->
+    <div class="step-panel">
+      <div class="text-center" style="margin-bottom: 3rem;">
+        <h2 class="display-l">
+          Mikorra <em>kell</em>?
+        </h2>
+        <p class="lead" style="margin: 1rem auto 0;">
+          A piros áthúzott napok már foglaltak.
+          Az első szabad nap legalább 2 hét múlva van.
+        </p>
+      </div>
+
+      <div class="calendar">
+        <div class="cal-head">
+          <button type="button" class="cal-nav cal-prev" aria-label="Előző hónap">‹</button>
+          <h3>—</h3>
+          <button type="button" class="cal-nav cal-next" aria-label="Következő hónap">›</button>
+        </div>
+        <div class="cal-grid"></div>
+        <div class="cal-legend">
+          <span><i class="legend-available"></i> Szabad</span>
+          <span><i class="legend-booked"></i> Foglalt</span>
+          <span><i class="legend-selected"></i> Kiválasztott</span>
+        </div>
+      </div>
+
+      <div class="step-nav">
+        <button type="button" class="btn-link" data-prev>
+          <span>←</span>
+          <span>Vissza</span>
+        </button>
+        <button type="button" class="btn" data-next>
+          <span>Tovább az adatokhoz</span>
+          <span class="btn-arrow">→</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ===== STEP 3: Details ===== -->
+    <div class="step-panel">
+      <div class="text-center" style="margin-bottom: 3rem;">
+        <h2 class="display-l">
+          Pár <em>részlet</em>
+        </h2>
+        <p class="lead" style="margin: 1rem auto 0;">
+          Hogy fel tudjam venni veled a kapcsolatot, és tudjam, mit készítsek.
+        </p>
+      </div>
+
+      <div class="form-grid">
+        <div class="form-field full">
+          <label for="name">Név *</label>
+          <input id="name" name="name" type="text" data-required placeholder="Vezetéknév, Keresztnév" />
+        </div>
+        <div class="form-field">
+          <label for="email">Email *</label>
+          <input id="email" name="email" type="email" data-required placeholder="@" />
+        </div>
+        <div class="form-field">
+          <label for="phone">Telefon *</label>
+          <input id="phone" name="phone" type="tel" data-required placeholder="+36" />
+        </div>
+
+        <div class="form-field full">
+          <label>Ízpreferenciák</label>
+
+          <p class="flavor-pref-cat">Design &amp; esküvői torták</p>
+          <div class="checkbox-group flavor-pills">
+            <span class="checkbox-pill"><input id="f1" type="checkbox" name="flavors" value="pisztacia-malna" /><label for="f1">Pisztácia – málna</label></span>
+            <span class="checkbox-pill"><input id="f2" type="checkbox" name="flavors" value="belgacsoki-soskaramell" /><label for="f2">Belga csoki – sós karamell</label></span>
+            <span class="checkbox-pill"><input id="f3" type="checkbox" name="flavors" value="vanilia-fehercsoki-eper" /><label for="f3">Vanília – fehércsoki – eper</label></span>
+            <span class="checkbox-pill"><input id="f4" type="checkbox" name="flavors" value="csokolade-meggy" /><label for="f4">Csokoládé – meggy</label></span>
+            <span class="checkbox-pill"><input id="f5" type="checkbox" name="flavors" value="citrom-lemoncurd" /><label for="f5">Citrom – lemon curd</label></span>
+            <span class="checkbox-pill"><input id="f6" type="checkbox" name="flavors" value="dio-mascarpone-sargabarack" /><label for="f6">Dió – mascarpone – sárgabarack</label></span>
+          </div>
+
+          <p class="flavor-pref-cat">Mousse torták</p>
+          <div class="checkbox-group flavor-pills">
+            <span class="checkbox-pill"><input id="f7" type="checkbox" name="flavors" value="soskaramell-mousse" /><label for="f7">Sós karamell mousse</label></span>
+            <span class="checkbox-pill"><input id="f8" type="checkbox" name="flavors" value="somloi-mousse" /><label for="f8">Somlói mousse</label></span>
+            <span class="checkbox-pill"><input id="f9" type="checkbox" name="flavors" value="turo-eper-mousse" /><label for="f9">Túró – eper mousse</label></span>
+            <span class="checkbox-pill"><input id="f10" type="checkbox" name="flavors" value="kinderbueno-mousse" /><label for="f10">Kinder bueno mousse</label></span>
+            <span class="checkbox-pill"><input id="f11" type="checkbox" name="flavors" value="triplacsoki-mousse" /><label for="f11">Tripla csoki mousse</label></span>
+          </div>
+
+          <p class="flavor-pref-cat">Gyerek torták</p>
+          <div class="checkbox-group flavor-pills">
+            <span class="checkbox-pill"><input id="f12" type="checkbox" name="flavors" value="tejcsoki-mascarpone" /><label for="f12">Tejcsoki – mascarpone</label></span>
+            <span class="checkbox-pill"><input id="f13" type="checkbox" name="flavors" value="kremturo-eper" /><label for="f13">Krémtúró – eper</label></span>
+            <span class="checkbox-pill"><input id="f14" type="checkbox" name="flavors" value="mascarpone-erdeigyumolcs" /><label for="f14">Mascarpone – erdei gyümölcs</label></span>
+            <span class="checkbox-pill"><input id="f15" type="checkbox" name="flavors" value="repatorta" /><label for="f15">Répatorta</label></span>
+          </div>
+
+          <p class="flavor-pref-cat">Mentes &amp; nyers vegán</p>
+          <div class="checkbox-group flavor-pills">
+            <span class="checkbox-pill"><input id="f16" type="checkbox" name="flavors" value="eper-malna-pisztacia" /><label for="f16">Eper – málna – pisztácia</label></span>
+            <span class="checkbox-pill"><input id="f17" type="checkbox" name="flavors" value="csoki-malnahab" /><label for="f17">Csoki – málnahab (tojásos)</label></span>
+            <span class="checkbox-pill"><input id="f18" type="checkbox" name="flavors" value="banoffee" /><label for="f18">Banoffee</label></span>
+            <span class="checkbox-pill"><input id="f19" type="checkbox" name="flavors" value="duplacsoki" /><label for="f19">Dupla csoki</label></span>
+            <span class="checkbox-pill"><input id="f20" type="checkbox" name="flavors" value="soskaramell-mentes" /><label for="f20">Sós karamell</label></span>
+            <span class="checkbox-pill"><input id="f21" type="checkbox" name="flavors" value="csokolade-vegan" /><label for="f21">Csokoládé (vegán)</label></span>
+            <span class="checkbox-pill"><input id="f22" type="checkbox" name="flavors" value="kokusz-mango-fehercsoki-vegan" /><label for="f22">Kókusz – mangó – fehércsoki (vegán)</label></span>
+            <span class="checkbox-pill"><input id="f23" type="checkbox" name="flavors" value="malna-csoki-vegan" /><label for="f23">Málna – csoki (vegán)</label></span>
+            <span class="checkbox-pill"><input id="f24" type="checkbox" name="flavors" value="eper-lime-vegan" /><label for="f24">Eper – lime (vegán)</label></span>
+          </div>
+
+          <p class="flavor-pref-cat">Egyéb</p>
+          <div class="checkbox-group flavor-pills">
+            <span class="checkbox-pill"><input id="f25" type="checkbox" name="flavors" value="other" /><label for="f25">Egyéb (üzenetben)</label></span>
+          </div>
+        </div>
+
+        <div class="form-field full">
+          <label>Allergén-igények</label>
+          <div class="checkbox-group">
+            <span class="checkbox-pill">
+              <input id="a1" type="checkbox" name="allergen" value="gluten" />
+              <label for="a1">Gluténmentes</label>
+            </span>
+            <span class="checkbox-pill">
+              <input id="a2" type="checkbox" name="allergen" value="laktoz" />
+              <label for="a2">Laktózmentes</label>
+            </span>
+            <span class="checkbox-pill">
+              <input id="a3" type="checkbox" name="allergen" value="tojas" />
+              <label for="a3">Tojásmentes</label>
+            </span>
+            <span class="checkbox-pill">
+              <input id="a4" type="checkbox" name="allergen" value="cukor" />
+              <label for="a4">Cukormentes</label>
+            </span>
+            <span class="checkbox-pill">
+              <input id="a5" type="checkbox" name="allergen" value="vegan" />
+              <label for="a5">Nyers vegán</label>
+            </span>
+          </div>
+        </div>
+
+        <div class="form-field full">
+          <label for="message">Üzenet — mesélj az elképzelésről</label>
+          <textarea id="message" name="message" placeholder="Stílus, szín, téma, Pinterest link, bármi ami segít megálmodni a tortát..."></textarea>
+        </div>
+      </div>
+
+      <div class="step-nav">
+        <button type="button" class="btn-link" data-prev>
+          <span>←</span>
+          <span>Vissza</span>
+        </button>
+        <button type="button" class="btn" data-next>
+          <span>Tovább a fizetéshez</span>
+          <span class="btn-arrow">→</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ===== STEP 4: Payment ===== -->
+    <div class="step-panel">
+      <div class="text-center" style="margin-bottom: 3rem;">
+        <h2 class="display-l">
+          A <em>foglaló</em>
+        </h2>
+        <p class="lead" style="margin: 1rem auto 0; max-width: 50ch;">
+          A teljes ár 50%-a most foglalóként, a fennmaradó rész
+          a kitűzött nap előtt 2 nappal esedékes.
+        </p>
+      </div>
+
+      <div class="summary">
+        <h3>Rendelés összefoglaló</h3>
+
+        <div class="summary-row">
+          <span class="label">Termék</span>
+          <span class="val" data-sum-product>—</span>
+        </div>
+        <div class="summary-row">
+          <span class="label">Esemény dátuma</span>
+          <span class="val" data-sum-date>—</span>
+        </div>
+        <div class="summary-row">
+          <span class="label">Megrendelő</span>
+          <span class="val" data-sum-name>—</span>
+        </div>
+
+        <div style="margin: 2rem 0 1rem; padding-top: 1.5rem; border-top: 1px solid var(--whisper);">
+          <div class="summary-row" style="border:none; padding: .5rem 0;">
+            <span class="label">Foglaló (teljes ár 50%-a)</span>
+            <span class="val" style="font-style:italic; opacity:.75;">visszaigazolás után</span>
+          </div>
+          <div class="summary-row" style="border:none; padding: .5rem 0;">
+            <span class="label">Fennmaradó összeg</span>
+            <span class="val" style="font-style:italic; opacity:.75;">esemény előtt 2 nappal</span>
+          </div>
+        </div>
+
+        <div class="summary-row total">
+          <span>Fizetési mód</span>
+          <span class="val">Átutalás</span>
+        </div>
+
+        <p class="summary-note">
+          Az ár minden esetben személyre szabott — az adagszám, a tervezés
+          komplexitása és a választott ízek alapján kerül megállapításra.
+          Visszaigazolás és pontos árajánlat <strong>emailben</strong> érkezik
+          a rendelés után 24 órán belül.
+        </p>
+
+        <div style="margin-top: 2.5rem; text-align: center;">
+          <button type="button" class="btn" style="width: 100%; justify-content: center;">
+            <span>Fizetés folytatása</span>
+            <span class="btn-arrow">→</span>
+          </button>
+        </div>
+
+        <p style="text-align: center; font-size: .72rem; letter-spacing: .15em; text-transform: uppercase; color: var(--charcoal); opacity: .5; margin-top: 1.5rem;">
+          Biztonságos fizetés · SSL titkosítás
+        </p>
+      </div>
+
+      <div class="step-nav">
+        <button type="button" class="btn-link" data-prev>
+          <span>←</span>
+          <span>Vissza az adatokhoz</span>
+        </button>
+        <span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFO SECTION -->
+  <section style="background: var(--ivory); border-top: 1px solid var(--whisper);">
+    <div class="container narrow">
+      <div class="section-head">
+        <span class="chapter-num">— jó tudni</span>
+        <h2>Hogyan <em>működik</em>?</h2>
+      </div>
+
+      <div style="display: grid; gap: 2.5rem; max-width: 640px;">
+        <div>
+          <h4 style="font-family: var(--serif); font-style: italic; font-size: 1.5rem; margin-bottom: .8rem;">
+            01. Foglalás
+          </h4>
+          <p>
+            Itt a négy lépésben leadod a rendelést és kifizeted a foglalót.
+            Visszaigazolás emailben érkezik 24 órán belül.
+          </p>
+        </div>
+        <div>
+          <h4 style="font-family: var(--serif); font-style: italic; font-size: 1.5rem; margin-bottom: .8rem;">
+            02. Egyeztetés
+          </h4>
+          <p>
+            Felveszem veled a kapcsolatot a részletekért — stílus, méret, ízek.
+            Igény szerint kóstoló boxot is rendelhetsz előre, hogy biztos
+            legyél a választott ízekben.
+          </p>
+        </div>
+        <div>
+          <h4 style="font-family: var(--serif); font-style: italic; font-size: 1.5rem; margin-bottom: .8rem;">
+            03. Végszámla
+          </h4>
+          <p>
+            Az esemény előtt 2 nappal emailben érkezik a végszámla
+            a fennmaradó összegről, átutalási adatokkal.
+          </p>
+        </div>
+        <div>
+          <h4 style="font-family: var(--serif); font-style: italic; font-size: 1.5rem; margin-bottom: .8rem;">
+            04. Az alkalom
+          </h4>
+          <p>
+            Frissen, kézzel készítve. Átvétel a műhelyben, vagy egyedi
+            egyeztetés alapján kiszállítás Budapesten belül.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            LipCake Factory
+            <small>Tortaműhely · Est. 2021</small>
+          </div>
+          <p class="footer-tagline">
+            ...egy szelet boldogság, minden egyes alkalommal.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Műhely</h4>
+          <ul>
+            <li><a href="gyerek-tortak.html">Gyerek torták</a></li>
+            <li><a href="mentes-tortak.html">Mentes torták</a></li>
+            <li><a href="eskuvoi-tortak.html">Esküvői torták</a></li>
+            <li><a href="izlista.html">Ízek</a></li>
+            <li><a href="galeria.html">Galéria</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kapcsolat</h4>
+          <ul>
+            <li><a href="tel:+36304108605">+36 30 410 8605</a></li>
+            <li><a href="mailto:lipcakefactory@gmail.com">lipcakefactory@gmail.com</a></li>
+            <li><a href="https://www.facebook.com/lipcakefactory" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="https://instagram.com/lipcakefactory.tortamuhely" target="_blank" rel="noopener">Instagram</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Műhely cím</h4>
+          <p class="footer-contact-big">
+            1203 Budapest,<br />Vízisport u. 23/E.<br />
+            <span style="font-size:.85rem; color: var(--rose-soft); display:block; margin-top:.5rem;">
+              Mediterrán Lakópark
+            </span>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 LipCake Factory · Minden jog fenntartva</span>
+        <span>
+          <a href="adatkezeles.html">Adatkezelési</a> · <a href="aszf.html">ÁSZF</a> ·
+          <a href="https://aimpress.vibepreview.com" target="_blank" rel="noopener">Készítette: AImpress</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

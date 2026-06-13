@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    /* Progressive enhancement: mark JS active (enables reveal animation).
+       Safety net: if the main script never runs, reveal everything anyway. */
+    document.documentElement.className += ' js';
+    addEventListener('load', function () {
+      setTimeout(function () {
+        if (!window.__lipReveal) {
+          var els = document.querySelectorAll('.reveal');
+          for (var i = 0; i < els.length; i++) els[i].classList.add('in');
+        }
+      }, 1500);
+    });
+  </script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galéria — LipCake Factory</title>
+  <meta name="description" content="Galéria — esküvői és design torták kézzel készítve." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Corben:wght@400;700&family=Cormorant:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Poiret+One&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav class="nav" aria-label="Főnavigáció">
+    <a href="index.html" class="nav-brand" aria-label="LipCake Factory Tortaműhely"><img class="nav-logo" src="https://tortamuhely.com/wp-content/uploads/2022/04/tortamuhely-retina.jpg" alt="LipCake Factory Tortaműhely" /></a>
+    <ul class="nav-menu">
+      <li><a href="gyerek-tortak.html">Gyerek torták</a></li>
+      <li><a href="mentes-tortak.html">Mentes</a></li>
+      <li><a href="eskuvoi-tortak.html">Esküvői</a></li>
+      <li><a href="izlista.html">Ízek</a></li>
+      <li><a href="galeria.html" class="active">Galéria</a></li>
+      <li class="menu-cta"><a href="rendeles.html">Rendelés</a></li>
+      <li class="menu-contact"><a href="tel:+36304108605">+36 30 410 8605</a></li>
+    </ul>
+    <span class="nav-cta-wrap"><a href="rendeles.html" class="nav-cta"><span>Rendelés</span></a></span>
+    <button class="nav-toggle" aria-label="Menü"><span></span><span></span><span></span></button>
+  </nav>
+
+  <header class="page-head container">
+    <span class="eyebrow reveal">Galéria</span>
+    <h1 class="reveal delay-1">
+      A <em>galéria</em>
+    </h1>
+    <p class="lead reveal delay-2">
+      Néhány korábbi munkám válogatva. Kattints bármelyik képre,
+      hogy nagyobb méretben láthasd.
+    </p>
+  </header>
+
+  <section class="container">
+    <div class="filters reveal">
+      <button class="chip active" data-filter="all">Mind</button>
+      <button class="chip" data-filter="wedding">Esküvői</button>
+      <button class="chip" data-filter="design">Design</button>
+    </div>
+
+    <div class="masonry">
+      <!-- Wedding -->
+      <figure data-cat="wedding" data-lightbox="https://tortamuhely.com/wp-content/uploads/2022/05/rendeles2-scaled-1.jpg">
+        <img src="https://tortamuhely.com/wp-content/uploads/2022/05/rendeles2-scaled-1.jpg" alt="Leveles naked torta" loading="lazy" />
+        <figcaption>Leveles naked torta</figcaption>
+      </figure>
+      <figure data-cat="wedding" data-lightbox="https://tortamuhely.com/wp-content/uploads/2022/05/1E08C083-DBD3-40D7-B201-A77A8A53606A.jpeg">
+        <img src="https://tortamuhely.com/wp-content/uploads/2022/05/1E08C083-DBD3-40D7-B201-A77A8A53606A.jpeg" alt="Csíkozott krémes" loading="lazy" />
+        <figcaption>Csíkozott krémes</figcaption>
+      </figure>
+      <figure data-cat="wedding" data-lightbox="https://tortamuhely.com/wp-content/uploads/2022/05/F8B5CEFE-C47D-4DE2-9538-69B8C7A107C7_1_201_a-scaled-1.jpeg">
+        <img src="https://tortamuhely.com/wp-content/uploads/2022/05/F8B5CEFE-C47D-4DE2-9538-69B8C7A107C7_1_201_a-scaled-1.jpeg" alt="Csipkés cukorvirág" loading="lazy" />
+        <figcaption>Csipkés-cukorvirágos</figcaption>
+      </figure>
+      <figure data-cat="wedding" data-lightbox="https://tortamuhely.com/wp-content/uploads/2022/05/20181029_210651_IMG_7578.jpg">
+        <img src="https://tortamuhely.com/wp-content/uploads/2022/05/20181029_210651_IMG_7578.jpg" alt="Gyümölcsös naked" loading="lazy" />
+        <figcaption>Gyümölcsös naked</figcaption>
+      </figure>
+      <figure data-cat="wedding" data-lightbox="https://tortamuhely.com/wp-content/uploads/2022/05/cropped-A407E36C-4372-427D-8FDC-5C3B38A754CB.jpeg">
+        <img src="https://tortamuhely.com/wp-content/uploads/2022/05/cropped-A407E36C-4372-427D-8FDC-5C3B38A754CB.jpeg" alt="Kék márvány" loading="lazy" />
+        <figcaption>Kék márvány</figcaption>
+      </figure>
+      <figure data-cat="wedding" data-lightbox="https://tortamuhely.com/wp-content/uploads/2022/05/IMG_3757.jpg">
+        <img src="https://tortamuhely.com/wp-content/uploads/2022/05/IMG_3757.jpg" alt="Fatörzs torta" loading="lazy" />
+        <figcaption>Fatörzs</figcaption>
+      </figure>
+      <figure data-cat="wedding" data-lightbox="https://tortamuhely.com/wp-content/uploads/2022/04/EC2_08081.jpg">
+        <img src="https://tortamuhely.com/wp-content/uploads/2022/04/EC2_08081.jpg" alt="Fodros torta" loading="lazy" />
+        <figcaption>Fodros</figcaption>
+      </figure>
+      <figure data-cat="wedding" data-lightbox="https://tortamuhely.com/wp-content/uploads/2022/05/77DDDFCA-5A2F-4B9D-97D8-12A91819F18E_1_201_a-scaled-1.jpeg">
+        <img src="https://tortamuhely.com/wp-content/uploads/2022/05/77DDDFCA-5A2F-4B9D-97D8-12A91819F18E_1_201_a-scaled-1.jpeg" alt="Sárga naked torta" loading="lazy" />
+        <figcaption>Sárga naked</figcaption>
+      </figure>
+      <figure data-cat="wedding" data-lightbox="https://tortamuhely.com/wp-content/uploads/2022/05/JAS09599-scaled-1.jpg">
+        <img src="https://tortamuhely.com/wp-content/uploads/2022/05/JAS09599-scaled-1.jpg" alt="Púder csíkos naked" loading="lazy" />
+        <figcaption>Púder csíkos naked</figcaption>
+      </figure>
+      <figure data-cat="wedding" data-lightbox="https://tortamuhely.com/wp-content/uploads/2022/04/lilatorta.jpg">
+        <img src="https://tortamuhely.com/wp-content/uploads/2022/04/lilatorta.jpg" alt="Lila márvány" loading="lazy" />
+        <figcaption>Lila márvány</figcaption>
+      </figure>
+      <figure data-cat="wedding" data-lightbox="https://tortamuhely.com/wp-content/uploads/2022/04/lipcakefactory_storiesbytimea-9-scaled-1.jpg">
+        <img src="https://tortamuhely.com/wp-content/uploads/2022/04/lipcakefactory_storiesbytimea-9-scaled-1.jpg" alt="Barack ostya díszítéssel" loading="lazy" />
+        <figcaption>Barack ostya díszítés</figcaption>
+      </figure>
+      <figure data-cat="wedding" data-lightbox="https://tortamuhely.com/wp-content/uploads/2022/04/Timi8.jpg">
+        <img src="https://tortamuhely.com/wp-content/uploads/2022/04/Timi8.jpg" alt="Cappuccino torta" loading="lazy" />
+        <figcaption>Cappuccino + szárazvirág</figcaption>
+      </figure>
+      <figure data-cat="wedding" data-lightbox="https://tortamuhely.com/wp-content/uploads/2023/02/88F0F673-AFC5-409E-B0C6-E0F7084D696B.jpeg">
+        <img src="https://tortamuhely.com/wp-content/uploads/2023/02/88F0F673-AFC5-409E-B0C6-E0F7084D696B-683x1024.jpeg" alt="Elegáns esküvői torta" loading="lazy" />
+        <figcaption>Elegáns</figcaption>
+      </figure>
+      <figure data-cat="wedding" data-lightbox="https://tortamuhely.com/wp-content/uploads/2023/02/8E878F4F-0F26-4FD2-8CFB-ADD89F60E72F-scaled.jpeg">
+        <img src="https://tortamuhely.com/wp-content/uploads/2023/02/8E878F4F-0F26-4FD2-8CFB-ADD89F60E72F-768x512.jpeg" alt="Kétemeletes torta" loading="lazy" />
+        <figcaption>Kétemeletes</figcaption>
+      </figure>
+
+      <!-- Design -->
+      <figure data-cat="design" data-lightbox="https://tortamuhely.com/wp-content/uploads/2025/08/EM6A4848-scaled.jpeg">
+        <img src="https://tortamuhely.com/wp-content/uploads/2025/08/EM6A4848-683x1024.jpeg" alt="Botanikus design" loading="lazy" />
+        <figcaption>Botanikus díszítés</figcaption>
+      </figure>
+      <figure data-cat="design" data-lightbox="https://tortamuhely.com/wp-content/uploads/2025/08/EM6A6504-scaled.jpeg">
+        <img src="https://tortamuhely.com/wp-content/uploads/2025/08/EM6A6504-768x1152.jpeg" alt="Modern design" loading="lazy" />
+        <figcaption>Modern minimál</figcaption>
+      </figure>
+      <figure data-cat="design" data-lightbox="https://tortamuhely.com/wp-content/uploads/2025/08/A7_8483-Edit-scaled.jpg">
+        <img src="https://tortamuhely.com/wp-content/uploads/2025/08/A7_8483-Edit-scaled.jpg" alt="Cukorvirágos" loading="lazy" />
+        <figcaption>Cukorvirág</figcaption>
+      </figure>
+      <figure data-cat="design" data-lightbox="https://tortamuhely.com/wp-content/uploads/2025/08/A7_8075-Edit-1-scaled.jpg">
+        <img src="https://tortamuhely.com/wp-content/uploads/2025/08/A7_8075-Edit-1-scaled.jpg" alt="Geometrikus" loading="lazy" />
+        <figcaption>Geometrikus</figcaption>
+      </figure>
+      <figure data-cat="design" data-lightbox="https://tortamuhely.com/wp-content/uploads/2025/08/A7_8387-Edit-scaled.jpg">
+        <img src="https://tortamuhely.com/wp-content/uploads/2025/08/A7_8387-Edit-scaled.jpg" alt="Festett torta" loading="lazy" />
+        <figcaption>Festett</figcaption>
+      </figure>
+      <figure data-cat="design" data-lightbox="https://tortamuhely.com/wp-content/uploads/2025/08/A7_8405-Edit-2-1-scaled.jpg">
+        <img src="https://tortamuhely.com/wp-content/uploads/2025/08/A7_8405-Edit-2-1-scaled.jpg" alt="Egyedi design torta" loading="lazy" />
+        <figcaption>Egyedi tervezés</figcaption>
+      </figure>
+      <figure data-cat="design" data-lightbox="https://tortamuhely.com/wp-content/uploads/2025/08/A7_8028-Edit-2-scaled.jpg">
+        <img src="https://tortamuhely.com/wp-content/uploads/2025/08/A7_8028-Edit-2-scaled.jpg" alt="Pasztell" loading="lazy" />
+        <figcaption>Pasztell</figcaption>
+      </figure>
+      <figure data-cat="design" data-lightbox="https://tortamuhely.com/wp-content/uploads/2025/08/IMG_8560-768x512.jpg">
+        <img src="https://tortamuhely.com/wp-content/uploads/2025/08/IMG_8560-768x512.jpg" alt="Egyedi szülinapi" loading="lazy" />
+        <figcaption>Szülinapi</figcaption>
+      </figure>
+
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container narrow">
+      <span class="chapter-num reveal">— foglalás</span>
+      <h2 class="reveal delay-1">A tiéd is<br /><em>itt lehet.</em></h2>
+      <p class="reveal delay-2">Add le a rendelést, és kezdjünk neki együtt.</p>
+      <div class="reveal delay-3">
+        <a href="rendeles.html" class="btn"><span>Rendelés indítása</span><span class="btn-arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">LipCake Factory<small>Tortaműhely · Est. 2021</small></div>
+          <p class="footer-tagline">...egy szelet boldogság, minden egyes alkalommal.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Műhely</h4>
+          <ul>
+            <li><a href="gyerek-tortak.html">Gyerek torták</a></li>
+            <li><a href="mentes-tortak.html">Mentes torták</a></li>
+            <li><a href="eskuvoi-tortak.html">Esküvői torták</a></li>
+            <li><a href="izlista.html">Ízek</a></li>
+            <li><a href="galeria.html">Galéria</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kapcsolat</h4>
+          <ul>
+            <li><a href="tel:+36304108605">+36 30 410 8605</a></li>
+            <li><a href="mailto:lipcakefactory@gmail.com">lipcakefactory@gmail.com</a></li>
+            <li><a href="https://www.facebook.com/lipcakefactory" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="https://instagram.com/lipcakefactory.tortamuhely" target="_blank" rel="noopener">Instagram</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Műhely cím</h4>
+          <p class="footer-contact-big">
+            1203 Budapest,<br />Vízisport u. 23/E.<br />
+            <span style="font-size:.85rem; color: var(--rose-soft); display:block; margin-top:.5rem;">Mediterrán Lakópark</span>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 LipCake Factory · Minden jog fenntartva</span>
+        <span><a href="adatkezeles.html">Adatkezelési</a> · <a href="aszf.html">ÁSZF</a> · <a href="https://aimpress.vibepreview.com" target="_blank" rel="noopener">Készítette: AImpress</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
